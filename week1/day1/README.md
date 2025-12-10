@@ -22,6 +22,7 @@
 ```bash
 chmod +x system_info.sh
 ./system_info.sh
+```
 
 ## Day 1: INTERVIEW QUESTIONS
 
