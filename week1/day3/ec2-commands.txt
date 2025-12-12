@@ -1,0 +1,25 @@
+## Day 3 - Used Commands
+
+$ chmod 400 devops-key.pem
+$ ssh -i devops-key.pem ubuntu@ec2-xx-xx-xx-xx.ap-south-1.compute.amazonaws.com
+$ sudo apt update -y
+$ sudo apt install nginx -y
+$ sudo systemctl enable nginx
+$ sudo systemctl start nginx
+$ systemctl status nginx
+$ echo "<h1>Hello from DevOps Day-3</h1>" | sudo tee /var/www/html/index.html
+$ sudo apt install amazon-cloudwatch-agent -y
+$ sudo systemctl start amazon-cloudwatch-agent
+$ sudo systemctl status amazon-cloudwatch-agent
+$ wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
+$ sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
+$ sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a status
+$ sudo systemctl restart amazon-cloudwatch-agent
+$ cd ~/devops-learning-journey
+$ mkdir -p week1/day3
+$ nano week1/day3/README.md
+
+
+
+
+
