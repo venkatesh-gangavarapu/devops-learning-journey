@@ -27,12 +27,12 @@ On Day 4, I learned how containers work, how to write Dockerfiles from scratch, 
 ---
 
 ## Project Structure
-week1/day4/
-|-- python-app/
-| |--- app.py
-| |--- requirements.txt
-| |--- Dockerfile
-|--- README.md
+week1/day4/ \
+|-- python-app/ \
+| |--- app.py \
+| |--- requirements.txt \
+| |--- Dockerfile \
+|--- README.md 
 
 ## Hands on Tasks Performed
 
