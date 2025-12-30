@@ -2,9 +2,11 @@ name: CI Pipeline
 
 on:
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,14 +14,12 @@ jobs:
 
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
-      - name: Show repo structure
-      - run: ls -la
+      - name: Show repository structure
+        run: ls -la
 
       - name: Run basic validation
-      - run: |
+        run: |
           echo "CI pipeline is running"
-          echo "Validating repository structure"
-
-
+          echo "Repository validated successfully"
