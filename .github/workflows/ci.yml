@@ -1,0 +1,25 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v4
+
+      - name: Show repo structure
+      - run: ls -la
+
+      - name: Run basic validation
+      - run: |
+          echo "CI pipeline is running"
+          echo "Validating repository structure"
+
+
