@@ -29,7 +29,7 @@ jobs:
         run: |
           IMAGE_NAME=ghcr.io/${{ github.repository }}/myapp
           IMAGE_TAG=${{ github.sha }}
-          docker build -t $IMAGE_NAME:$IMAGE_TAG .
+          docker build -t $IMAGE_NAME:$IMAGE_TAG ./app
 
       - name: Push Docker image
         run: |
