@@ -33,7 +33,7 @@ jobs:
 
       - name: Push Docker image
         run: |
-          IMAGE_NAME=ghrc.io/${{ github.repository }}/myapp
+          IMAGE_NAME=ghcr.io/${{ github.repository }}/myapp
           IMAGE_TAG=${{ github.sha }}
           docker push $IMAGE_NAME:$IMAGE_TAG
 
