@@ -1,14 +1,17 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
+
+# Create non-root user (Production Practice)
+RUN useradd -m appuser
 
 WORKDIR /app
-
-RUN apt-get update && apt-get install -y curl \
-    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py .
+
+# Switch to non-root user
+USER appuser
 
 EXPOSE 5000
 
