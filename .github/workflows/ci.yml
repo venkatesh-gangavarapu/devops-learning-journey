@@ -53,5 +53,24 @@ jobs:
           docker push $IMAGE_NAME:$IMAGE_TAG
 
 
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy to RHEL EC2
+        uses: appleboy/ssh-action@1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            export IMAGE_TAG=${{ github.sha }}
+            cd ~
+            ./deploy.sh
+
+
+
 
 
