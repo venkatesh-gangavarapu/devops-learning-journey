@@ -60,7 +60,7 @@ jobs:
 
     steps:
       - name: Deploy to RHEL EC2
-        uses: appleboy/ssh-action@1.0.3
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
