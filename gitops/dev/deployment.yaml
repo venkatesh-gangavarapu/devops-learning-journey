@@ -16,7 +16,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: app
-          image: ghcr.io/venkatesh-gangavarapu/devops-learning-journey/myapp:latest
+          image: ghcr.io/venkatesh-gangavarapu/devops-learning-journey/myapp:be0682cb47d6d8dffc46a7f6fd41394532a3ee86
           ports:
             - containerPort: 5000
           readinessProbe:
